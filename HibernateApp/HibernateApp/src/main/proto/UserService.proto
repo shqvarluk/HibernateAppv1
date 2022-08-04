@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.example.grpc;
+
+message UserRequest {
+  int32 id = 1;
+  string login = 2;
+}
+
+message UserResponse {
+  string result = 1;
+}
+
+service UserService {
+  rpc add(UserRequest) returns (UserResponse);
+}
